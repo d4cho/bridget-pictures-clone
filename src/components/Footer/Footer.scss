@@ -3,7 +3,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 3;
+    z-index: 999;
 
     background-color: #fff;
     display: flex;
@@ -11,6 +11,7 @@
     align-items: center;
     font-size: 22px;
     padding: 0 16px;
+    user-select: none;
 
     .Footer_name {
     }

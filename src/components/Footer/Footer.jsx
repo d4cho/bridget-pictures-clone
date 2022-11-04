@@ -5,12 +5,21 @@ import { addZeroesInFront } from '../../utils/functions/functions';
 
 const CATEGORIES = ['Featured', 'iPhone', 'Film', 'Info'];
 
-const Footer = () => {
-    const { category, setCategory, threshold, setThreshold, currImgIdx } =
-        useAppContext();
+const Footer = ({ numImages }) => {
+    const {
+        category,
+        setCategory,
+        threshold,
+        setThreshold,
+        currImgIdx,
+        setCurrImgIdx,
+        setIsImageSelected,
+    } = useAppContext();
 
     const handleCategoryClick = (category) => {
         setCategory(category);
+        setCurrImgIdx(-1);
+        setIsImageSelected(false);
     };
 
     const handleSubtractClick = () => {
@@ -58,7 +67,8 @@ const Footer = () => {
                 <button onClick={handleAddClick}>+</button>
             </div>
             <div className='Footer_imageIndex'>
-                {addZeroesInFront(currImgIdx + 1)} / 0041
+                {addZeroesInFront(currImgIdx + 1)} /{' '}
+                {addZeroesInFront(numImages)}
             </div>
         </div>
     );
