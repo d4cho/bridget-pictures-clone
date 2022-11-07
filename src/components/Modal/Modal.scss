@@ -1,0 +1,58 @@
+.Modal_wrapper {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    visibility: hidden;
+    transition: all 0.3s linear 0.3s;
+
+    .Modal_content {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+        }
+    }
+}
+
+.isOpen {
+    visibility: visible;
+    top: 0%;
+}
+
+.Modal_backdrop {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 888;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in;
+}
+
+.showBackdrop {
+    opacity: 0.5;
+    visibility: visible;
+}
