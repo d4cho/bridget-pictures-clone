@@ -1,0 +1,16 @@
+.MainMobile_wrapper {
+    background-color: aquamarine;
+    height: 100%;
+    overflow: scroll;
+
+    .MainMobile_image {
+        height: 20vh;
+        width: 60%;
+        object-fit: contain;
+        position: sticky;
+        top: 50vh;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20vh;
+    }
+}
